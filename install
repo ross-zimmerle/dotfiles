@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+DOTFILES=$(cd "$(dirname $0)";pwd)
+
+# OS Detection / OS Specific variables
+if [[ -f /etc/os-release ]]; then
+	RELEASE=$(grep '^NAME="' /etc/os-release | sed -E 's/NAME="([a-zA-Z]+).*/\1/')
+elif [[ -f /usr/lib/os-release ]]; then
+	RELEASE=$(grep '^NAME="' /usr/lib/os-release | sed -E 's/NAME="([a-zA-Z]+).*/\1/')
+elif uname -a|grep -qi darwin > /dev/null 2>&1; then
+	RELEASE="Mac"
+elif [[ -f /etc/redhat-release ]]; then
+	# Probably old ass RHEL5 or AL2012 if it doesn't have /etc/os-release
+	RELEASE=Amazon
+else
+	RELEASE="false"
+	echo "Unable to detect OS correctly, assuming some sort of Linux..."
+fi

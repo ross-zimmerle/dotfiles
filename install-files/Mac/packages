@@ -1,0 +1,17 @@
+bash
+ctags
+gcc
+git
+gnupg
+gnutls
+less
+node
+openssh
+python
+r
+ruby
+tmux
+vim
+wget
+zsh
+zsh-completions
