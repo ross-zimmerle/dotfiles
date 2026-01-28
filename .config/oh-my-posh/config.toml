@@ -1,0 +1,97 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'os'
+    style = 'diamond'
+    leading_diamond = ''
+    trailing_diamond = ''
+    template = ' {{.Icon}} '
+    background = '#111111'
+    foreground = '#ffffff'
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'powerline'
+    powerline_symbol = ''
+    template = '  {{ .Path }} '
+    background = '#444444'
+    foreground = '#ffffff'
+
+    [blocks.segments.properties]
+      style = 'unique'
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'powerline'
+    powerline_symbol = ''
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }} {{ end }} '
+    background = '#fffb38'
+    foreground = '#193549'
+
+    [blocks.segments.properties]
+      branch_max_length = 20
+      fetch_status = true
+
+  [[blocks.segments]]
+    type = 'status'
+    style = 'diamond'
+    trailing_diamond = ''
+    template = ' {{ if .Error }}{{ else }}{{ end }} '
+    background = '#2e9599'
+    foreground = '#111111'
+    background_templates = ['{{ if .Error }}#f1184c{{ end }}']
+
+    [blocks.segments.properties]
+      always_enabled = true
+
+[[blocks]]
+  type = 'rprompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    type = 'node'
+    style = 'plain'
+    template = ' {{ .Full }} '
+    background = 'transparent'
+    foreground = '#3C873A'
+    display_mode = 'files'
+    [blocks.segments.properties]
+      home_enabled = false
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    template = '󱎫 {{ .FormattedMs }} '
+    background = 'transparent'
+    foreground = '#ffffff'
+    [blocks.segments.properties]
+      threshold = 1000
+
+  [[blocks.segments]]
+    type = 'time'
+    style = 'plain'
+    template = '󱑎 {{ .CurrentDate | date "15:04" }} '
+    background = 'transparent'
+    foreground = '#ffffff'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    template = '❯ '
+    background = 'transparent'
+    foreground = '#007ACC'
+    foreground_templates = ['{{if .Error}}#f1184c{{end}}']

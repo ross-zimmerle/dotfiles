@@ -120,3 +120,4 @@ mkcd() {
 
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml)"
