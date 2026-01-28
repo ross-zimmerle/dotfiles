@@ -37,6 +37,8 @@ function dot {
    git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
 }
 
+mkdir -p "$HOME/.config/oh-my-posh" 
+
 # Ensure we don't overwrite existing files without backup
 echo "Checking out dotfiles..."
 if ! dot checkout; then
