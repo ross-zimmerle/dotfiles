@@ -1,0 +1,241 @@
+
+==============================================================================
+fidget:                                                                     ✅
+
+fidget.setup ~
+- ✅ OK All user-specified options are known and accounted for
+
+fidget.integration ~
+
+fidget.progress ~
+- ✅ OK Using LspProgress handler implementation
+- ✅ OK Option 'progress.lsp.progress_ringbuf_size' is 0, using default size
+
+fidget.notification ~
+- ℹ️ INFO vim.notify() is not set to fidget.notify()
+- ℹ️ INFO Rendering notifications for regular UI (e.g., nvim TUI)
+
+==============================================================================
+lazy:                                                               2 ⚠️  1 ❌
+
+lazy.nvim ~
+- {lazy.nvim} version `11.17.5`
+- ✅ OK {git} `version 2.52.0`
+- ✅ OK no existing packages found by other package managers
+- ✅ OK packer_compiled.lua not found
+
+luarocks ~
+- checking `hererocks` installation
+- ✅ OK no plugins require `luarocks`, so you can ignore any warnings below
+- ✅ OK {python3} `Python 3.13.7`
+- ❌ ERROR {/Users/rosszimmerle/.local/share/nvim/lazy-rocks/hererocks/bin/luarocks} not installed
+- ⚠️ WARNING {/Users/rosszimmerle/.local/share/nvim/lazy-rocks/hererocks/bin/lua} version `5.1` not installed
+- ⚠️ WARNING Lazy won't be able to install plugins that require `luarocks`.
+  Here's what you can do:
+   - fix your `luarocks` installation
+   - disable *hererocks* with `opts.rocks.hererocks = false`
+   - disable `luarocks` support completely with `opts.rocks.enabled = false`
+
+==============================================================================
+lspconfig:                                                                  ✅
+
+- Skipped. This healthcheck is redundant with `:checkhealth vim.lsp`.
+
+==============================================================================
+mason:                                                                    5 ⚠️
+
+mason.nvim ~
+- ✅ OK mason.nvim version v2.2.1
+- ✅ OK PATH: prepend
+- ✅ OK Providers: 
+    mason.providers.registry-api
+    mason.providers.client
+- ✅ OK neovim version >= 0.10.0
+
+mason.nvim [Registries] ~
+- ✅ OK Registry `github.com/mason-org/mason-registry version: 2026-01-26-deep-pig` is installed.
+- ✅ OK Registry `SynthesizedRegistrySource` is installed.
+
+mason.nvim [Core utils] ~
+- ✅ OK unzip: `UnZip 6.00 of 20 April 2009, by Info-ZIP, with modifications by Apple Inc.`
+- ⚠️ WARNING wget: not available
+  - ADVICE:
+    - spawn: wget failed with exit code - and signal -. Could not find executable "wget" in PATH.
+
+- ✅ OK curl: `curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.67.1`
+- ✅ OK gzip: `Apple gzip 475`
+- ✅ OK tar: `bsdtar 3.5.3 - libarchive 3.7.4 zlib/1.2.12 liblzma/5.4.3 bz2lib/1.0.8 `
+- ✅ OK bash: `GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)`
+
+mason.nvim [Languages] ~
+- ⚠️ WARNING luarocks: not available
+  - ADVICE:
+    - spawn: luarocks failed with exit code - and signal -. Could not find executable "luarocks" in PATH.
+
+- ✅ OK Ruby: `ruby 2.6.10p210 (2022-04-12 revision 67958) [universal.arm64e-darwin25]`
+- ✅ OK RubyGem: `3.0.3.1`
+- ✅ OK npm: `11.8.0`
+- ✅ OK node: `v22.19.0`
+- ⚠️ WARNING javac: not available
+  - ADVICE:
+    - spawn: javac failed with exit code 1 and signal 0. The operation couldn’t be completed. Unable to locate a Java Runtime.
+      Please visit http://www.java.com for information on installing Java.
+
+
+- ✅ OK Go: `go version go1.25.5 darwin/arm64`
+- ⚠️ WARNING julia: not available
+  - ADVICE:
+    - spawn: julia failed with exit code - and signal -. Could not find executable "julia" in PATH.
+
+- ⚠️ WARNING java: not available
+  - ADVICE:
+    - spawn: java failed with exit code 1 and signal 0. The operation couldn’t be completed. Unable to locate a Java Runtime.
+      Please visit http://www.java.com for information on installing Java.
+
+
+- ✅ OK python: `Python 3.13.7`
+- ✅ OK cargo: `cargo 1.92.0 (Homebrew)`
+- ✅ OK pip: `pip 25.2 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pip (python 3.13)`
+- ✅ OK python venv: `Ok`
+- ✅ OK PHP: `PHP 8.5.0 (cli) (built: Nov 18 2025 08:02:20) (NTS)`
+- ✅ OK Composer: `Composer version 2.8.11 2025-08-21 11:29:39`
+
+==============================================================================
+mason-lspconfig:                                                            ✅
+
+mason-lspconfig.nvim ~
+- ✅ OK Neovim v0.11
+- ✅ OK mason.nvim v2
+
+==============================================================================
+telescope:                                                                  ✅
+
+Checking for required plugins ~
+- ✅ OK plenary installed.
+- ✅ OK nvim-treesitter installed.
+
+Checking external dependencies ~
+- ✅ OK rg: found ripgrep 15.1.0
+- ✅ OK fd: found fd 10.3.0
+
+===== Installed extensions ===== ~
+
+Telescope Extension: `fzf` ~
+- ✅ OK lib working as expected
+- ✅ OK file_sorter correctly configured
+- ✅ OK generic_sorter correctly configured
+
+==============================================================================
+vim.deprecated:                                                             ✅
+
+- ✅ OK No deprecated functions detected
+
+==============================================================================
+vim.health:                                                                 ✅
+
+Configuration ~
+- ✅ OK no issues found
+
+Runtime ~
+- ✅ OK $VIMRUNTIME: /opt/homebrew/Cellar/neovim/0.11.5_1/share/nvim/runtime
+
+Performance ~
+- ✅ OK Build type: Release
+
+Remote Plugins ~
+- ✅ OK Up to date
+
+terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=^H`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+- $TERM_PROGRAM="iTerm.app"
+- $COLORTERM="truecolor"
+
+External Tools ~
+- ✅ OK ripgrep 15.1.0 (/opt/homebrew/bin/rg)
+
+==============================================================================
+vim.lsp:                                                                    ✅
+
+- LSP log level : WARN
+- Log path: /Users/rosszimmerle/.local/state/nvim/lsp.log
+- Log size: 0 KB
+
+vim.lsp: Active Clients ~
+- No active clients
+
+vim.lsp: Enabled Configurations ~
+
+vim.lsp: File Watcher ~
+- file watching "(workspace/didChangeWatchedFiles)" disabled on all clients
+
+vim.lsp: Position Encodings ~
+- No active clients
+
+==============================================================================
+vim.provider:                                                             6 ⚠️
+
+Clipboard (optional) ~
+- ✅ OK Clipboard tool found: pbcopy
+
+Node.js provider (optional) ~
+- Node.js: v22.19.0
+
+- ⚠️ WARNING Missing "neovim" npm (or yarn, pnpm) package.
+  - ADVICE:
+    - Run in shell: npm install -g neovim
+    - Run in shell (if you use yarn): yarn global add neovim
+    - Run in shell (if you use pnpm): pnpm install -g neovim
+    - You may disable this provider (and warning) by adding `let g:loaded_node_provider = 0` to your init.vim
+
+Perl provider (optional) ~
+- ⚠️ WARNING "Neovim::Ext" cpan module is not installed
+  - ADVICE:
+    - See :help |provider-perl| for more information.
+    - You can disable this provider (and warning) by adding `let g:loaded_perl_provider = 0` to your init.vim
+- ⚠️ WARNING No usable perl executable found
+
+Python 3 provider (optional) ~
+- ⚠️ WARNING No Python executable found that can `import neovim`. Using the first available executable for diagnostics.
+- ⚠️ WARNING Could not load Python :
+  /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 does not have the "neovim" module.
+  /Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13 does not have the "neovim" module.
+  python3.12 not found in search path or not executable.
+  python3.11 not found in search path or not executable.
+  python3.10 not found in search path or not executable.
+  python3.9 not found in search path or not executable.
+  python not found in search path or not executable.
+  - ADVICE:
+    - See :help |provider-python| for more information.
+    - You can disable this provider (and warning) by adding `let g:loaded_python3_provider = 0` to your init.vim
+- Executable: Not found
+
+Python virtualenv ~
+- ✅ OK no $VIRTUAL_ENV
+
+Ruby provider (optional) ~
+- Ruby: ruby 2.6.10p210 (2022-04-12 revision 67958) [universal.arm64e-darwin25]
+- ⚠️ WARNING `neovim-ruby-host` not found.
+  - ADVICE:
+    - Run `gem install neovim` to ensure the neovim RubyGem is installed.
+    - Run `gem environment` to ensure the gem bin directory is in $PATH.
+    - If you are using rvm/rbenv/chruby, try "rehashing".
+    - See :help |g:ruby_host_prog| for non-standard gem installations.
+    - You can disable this provider (and warning) by adding `let g:loaded_ruby_provider = 0` to your init.vim
+
+==============================================================================
+vim.treesitter:                                                             ✅
+
+Treesitter features ~
+- Treesitter ABI support: min 13, max 15
+- WASM parser support: false
+
+Treesitter parsers ~
+- ✅ OK Parser: c                         ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/c.so
+- ✅ OK Parser: lua                       ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/lua.so
+- ✅ OK Parser: markdown                  ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/markdown.so
+- ✅ OK Parser: markdown_inline           ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/markdown_inline.so
+- ✅ OK Parser: query                     ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/query.so
+- ✅ OK Parser: vim                       ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/vim.so
+- ✅ OK Parser: vimdoc                    ABI: 15, path: /opt/homebrew/Cellar/neovim/0.11.5_1/lib/nvim/parser/vimdoc.so
+
